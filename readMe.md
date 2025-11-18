@@ -13,6 +13,11 @@ It is for the purpose of personal learning only,not allowing for commercial use.
 
 * grpo_train.jsonl and grpo_teest.jsonl for GRPO post training use.A little note on the composition of dataset :grpo_train is mainly made up of the original test.jsonl ,but I also add some examples from sft.jsonl ,as I it will help to anchor the training, that is ,about 85% of grpo_train is from the original test.jsonl and about 15% is from sft.jsonl . The grpo_test.jsonl is purely made out of original test.jsonl .Don't worry ,grpo_train and gpro_test are not overlapping. If you don't like this ,it is trivial to make the gpro dataset youself from original dataset.
 
+## training result
+* I use Qwen2.5-Math-1.5B for SFT and GRPO training
+* Before sft,the accuray of the model on test.jsonl is about 3% ,after sft ,the accuray on test.jsonl(the first 2000 data entries) is about 37%
+* After GRPO training ,I gain the accuray at about 48% on grpo_test.jsonl
+
 ## Dataset Structure
 all files are in jsonl format
 the prompt in sft.jsonl is in fixed format
